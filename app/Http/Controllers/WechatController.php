@@ -20,7 +20,7 @@ class WechatController extends Controller
         //    Log::info('request arrived.');
 
        Log::info('------------------------return response.');
-       Log::info('------------------------.'.$this->request->get('echostr'));
+    //    Log::info('------------------------.'.$this->request->get('echostr'));
         $wechat = app('wechat');
         $wechat->server->setMessageHandler(function($message){
             if ($message->MsgType == 'voice') {
@@ -37,7 +37,7 @@ class WechatController extends Controller
        });
 
        Log::info('------------------------return response.');
-       Log::info('------------------------.'.$this->request->get('echostr'));
+    //    Log::info('------------------------.'.$this->request->get('echostr'));
 
        return $wechat->server->serve();
    }
