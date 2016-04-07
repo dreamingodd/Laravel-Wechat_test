@@ -19,6 +19,9 @@ class WechatController extends Controller
 
        $wechat = app('wechat');
        $wechat->server->setMessageHandler(function($message){
+           if ($message->MsgType == 'voice') {
+               return "不好意思，小探不是AlphaGo，听不懂呢！";
+           }
            return "This is Casarover Laravel Wechat Test";
        });
 
