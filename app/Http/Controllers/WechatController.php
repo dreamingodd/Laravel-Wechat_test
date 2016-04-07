@@ -31,7 +31,7 @@ class WechatController extends Controller
                  ."合作/推广请加探庐君微信：sonoffeng 备注民宿。";
        });
 
-    //    Log::info('------------------------return response.');
+       Log::info('------------------------return response.');
 
        return $wechat->server->serve();
    }
