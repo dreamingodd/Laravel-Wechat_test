@@ -25,7 +25,7 @@ class WechatController extends Controller
            return "This is Casarover Laravel Wechat Test";
        });
 
-    //    Log::info('return response.');
+       Log::info('------------------------return response.');
 
        return $wechat->server->serve();
    }
